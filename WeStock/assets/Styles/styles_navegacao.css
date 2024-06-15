@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding-top: 56px; /* Height of the header */
+    display: flex;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu_topo {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header .navbar-brand img {
+    height: 40px;
+}
+
+.header .navbar-collapse {
+    justify-content: center;
+}
+
+.search-container {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.search-bar {
+    width: 100%;
+    padding-right: 40px;
+    border-radius: 20px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.icone-nome {
+    width: 10px;
+    height: 10px;
+}
+
+.sidebar {
+    background-color: var(--cor-12);
+    width: 250px;
+    padding: 20px;
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar a {
+    text-decoration: none;
+    color: var(--cor-03);
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: var(--font-07);
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    color: var(--cor-01);
+    font-weight: 900;
+    font-size: larger;
+}
+
+.sidebar-icon {
+    width: 24px;
+    margin: 10px;
+}
+
+.botao-entrar_salvar {
+    max-width: 274px;
+    max-height: 38px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.navegacao-titulo {
+    font-family: var(--font-09);
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .header .search-bar {
+        width: 80%;
+    }
+    .sidebar {
+        width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header .search-bar {
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+}

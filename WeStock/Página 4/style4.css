@@ -1,0 +1,144 @@
+.main-content {
+    flex-direction: column;
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--cor-13);
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-family: var(--font-08);
+}
+
+.welcome-destaque {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.btn-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.btn-add {
+    justify-content: flex-end;
+    padding: 40px;
+}
+
+.botao-adicionar {
+    background-color: var(--cor-10);
+    border-radius: 20px;
+    color: var(--cor-02);
+    font-weight: 600;
+}
+
+.cards {
+    font-family: var(--font-03);
+}
+
+.product-card {
+    background-color: var(--cor-02);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px var(--cor-08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 394px;
+    height: 384px;
+}
+
+.product-card-main {
+    padding-right: 10px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.product-card-mainImage {
+    width: 176px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product-card-arrow {
+    width: 77.07px;
+    height: 72px;
+}
+
+.product-card-title {
+    color: var(--cor-01);
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.recent-product-card {
+    flex-direction: column;
+    background-color: var(--cor-02);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--cor-08);
+    align-items: center;
+    margin-bottom: 20px;
+    width: 394px;
+    height: 384px;
+    color: var(--cor-09);
+}
+
+.recent-product-card-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.recent-product-card-item {
+    background-color: #fff;
+    padding: 20px 0px 20px;
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    justify-content: space-around;
+}
+
+.recent-product-card-item p {
+    margin-right: 20px;
+}
+
+.recent-product-card img {
+    width: 40px;
+    height: auto;
+    margin-right: 20px;
+}
+@media (max-width: 768px) {
+    .header .search-bar {
+        width: 80%;
+    }
+    .sidebar {
+        width: 200px;
+    }
+    .main-content {
+        margin-left: 200px;
+    }
+}
+@media (max-width: 576px) {
+    .header .search-bar {
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+    .main-content {
+        margin-left: 0;
+        padding-top: 20px;
+    }
+}

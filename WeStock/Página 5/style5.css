@@ -1,0 +1,26 @@
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+}
+
+.profile-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-container .form-group {
+    margin-bottom: 15px;
+}
+
+.profile-container .btn {
+    width: 100%;
+}

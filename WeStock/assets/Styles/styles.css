@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Jost:wght@400;500;700&family=Open+Sans:wght@400;700&family=Plus+Jakarta+Sans:wght@600;700&family=Poppins:wght@400;600&family=Raleway:wght@500;600;700;800&family=Urbanist:wght@400;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cor-01: #003399;
+    --cor-02: #ffffff;
+    --cor-03: #0D163A;
+    --cor-04: #056BF6;
+    --cor-05: #000;
+    /*--cor-06: #06588E;*/
+    --cor-07: red;
+    --cor-08: rgba(0, 0, 0, 0.1);
+    --cor-09: #524F4F;
+    --cor-10: #4fb66c;
+    --cor-11: #9dace7;
+    --cor-12: #e4e4e6;
+    --cor-13: #fafbfc;
+
+
+
+    --font-01: 'Baloo 2', cursive;
+    --font-02: 'Urbanist', sans-serif;
+    --font-03: 'Poppins', sans-serif;
+    --font-04: 'Jost', sans-serif;
+    --font-05: 'Open Sans', sans-serif;
+    --font-06: 'Raleway', sans-serif;
+    --font-07: 'Plus Jakarta Sans', sans-serif;
+    --font-08: 'Nunito Sans', sans-serif;
+    --font-09: 'Roboto', sans-serif;
+
+        
+}
+
+body {
+    background-color: var(--cor-02);
+}
+
+.navbar-brand img:hover {
+    opacity: 0.8;
+}
+
+.nav-link-contato,
+.nav-link-cadastro {
+    color: var(--cor-01);
+    margin-right: 15px;
+}
+
+.nav-link-contato:hover,
+.nav-link-cadastro:hover {
+    color: var(--cor-04);
+}
+
+.nav-link {
+    font: var(--font-01);
+    font-size: 16px;
+}
+
+.nav-link-contato {
+    font-weight: 400;
+}
+
+.nav-link-cadastro {
+    font-weight: 700;
+}
+
+
+.botao-entrar_salvar {
+    background-color: var(--cor-04);
+    border-radius: 11px;
+    color: var(--cor-02);
+}
+
+.botao-entrar_salvar:hover {
+    background-color: var(--cor-01);
+    color: var(--cor-02);
+}
+
+.form-label {
+    margin-bottom: 0px;
+}

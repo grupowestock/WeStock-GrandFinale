@@ -1,0 +1,47 @@
+body {
+    background-color: var(--cor-02);
+    margin: 0;
+}
+
+header {
+    z-index: 1000;
+}
+
+.error-message {
+    color: var(--cor-07);
+    font-size: 14px;
+}
+
+main {
+    margin-top: 100px; /* Ajuste para evitar sobreposição com o header */
+}
+
+.decorative-image-top-right {
+    position: fixed;
+    top: 70px; /* Ajuste conforme necessário para posicionar abaixo do header */
+    right: 20px; /* Ajuste conforme necessário */
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.decorative-image-bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.titulo-cadastro {
+    font-size: 60px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.email-box {
+    width: 60%;
+}
+
+.botao-voltar {
+    border-radius: 11px;
+}
