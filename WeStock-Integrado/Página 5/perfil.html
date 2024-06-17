@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeStock - Perfil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="../assets/Styles/styles.css" rel="stylesheet">
+    <link href="../assets/Styles/styles_navegacao.css" rel="stylesheet">
+    <link href="./style5.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="d-flex navbar navbar-expand-lg navbar-light bg-white shadow-sm menu_topo w-100">
+            <a class="navbar-brand" href="../Página 4/dashboard.html">
+                <img src="../assets/Images/Logo weStock.png" alt="Logo WeStock">
+            </a>
+            <div class="collapse navbar-collapse justify-content-around">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:history.back()"><img src="../assets/Images/ReturnDoor.png" alt="Voltar" class="icone-nome"> Voltar</a>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="form-control search-bar" placeholder="Procurar aqui...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-perfil" href="../Página 5/perfil.html"><img class="icone-nome" src="../assets/Images/Perfil.png" alt="Perfil"> Lebron</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="d-flex sidebar">
+        <div class="sidebar-superior">
+            <a href="../Página 5/perfil.html"><img src="../assets/Images/Perfil_pequeno3.png" alt="icone perfil pequeno" class="sidebar-icon">Perfil</a>
+            <a href="../Página 7/consulta_produtos.html"><img src="../assets/Images/Nuvem-produtos3.png" alt="icone nuvem pequeno" class="sidebar-icon">Produtos</a>
+        </div>
+        <div class="sidebar-inferior">
+            <a class="nav-link nav-link-contato" href="https://wa.me/5511987654321" target="_blank"><img src="../assets/Images/Info3.png" class="sidebar-icon">Ajuda</a>
+            <a href="../Página 1/index.html"><img src="../assets/Images/ExitDoor3.png" alt="ícone porta saída pequeno" class="sidebar-icon"> Sair da conta</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="profile-container">
+            <h2 class="navegacao-titulo">Perfil</h2>
+            <form id="profileForm">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="inputNome" value="Lebron">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastName" class="form-label">Sobrenome</label>
+                        <input type="text" class="form-control" id="inputSobrenome" value="James">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="celular" class="d-flex form-label">Celular</label>
+                        <input type="tel" class="form-control" id="inputCelular" value="(11)94657-8808">
+                        <i class="fa-solid fa-pencil"></i>
+                        <small id="cellHelp" class="form-text text-muted text-left help-text">Apenas números, 11 dígitos.</small>
+                        <span id="cellError" class="error-message"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="inputEmail" value="lebron@email.com">
+                    </div>
+                </div>
+                <button class="d-flex btn botao-entrar_salvar">Salvar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../Página 5/perfil.js"></script>
+    <script>
+        document.getElementById('profileForm').addEventListener('submit', function(event) {
+            var cellError = document.getElementById('cellError');
+            var celular = document.getElementById('inputCelular').value;
+
+            // Limpar qualquer mensagem de erro anterior
+            cellError.textContent = '';
+
+            // Se o campo Celular não estiver vazio, validá-lo
+            if (celular) {
+                // Remover todos os caracteres não numéricos para validação
+                var celularDigits = celular.replace(/\D/g, '');
+                var cellPattern = /^[0-9]{11}$/;
+
+                // Validar tamanho do número de celular
+                if (!cellPattern.test(celularDigits)) {
+                    cellError.textContent = 'O número de celular deve ter 11 dígitos.';
+                    event.preventDefault(); // Impedimento de submissão do formulário
+                } else {
+                    alert('Perfil atualizado com sucesso!');
+                }
+            } else {
+                alert('Perfil atualizado com sucesso!');
+            }
+        });
+
+        // Formatar número de celular como (11)98765-4321
+        document.getElementById('inputCelular').addEventListener('input', function(event) {
+            var input = event.target;
+            var value = input.value.replace(/\D/g, '');
+
+            var formattedValue = '';
+            if (value.length > 0) {
+                formattedValue += '(' + value.substring(0, 2);
+            }
+            if (value.length >= 2) {
+                formattedValue += ')';
+            }
+            if (value.length > 2) {
+                formattedValue += value.substring(2, 7);
+            }
+            if (value.length >= 7) {
+                formattedValue += '-' + value.substring(7, 11);
+            }
+            input.value = formattedValue;
+        });
+    </script>
+</body>
+</html>

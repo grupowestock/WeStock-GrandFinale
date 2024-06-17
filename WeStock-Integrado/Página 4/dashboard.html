@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeStock - Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="../assets/Styles/styles.css" rel="stylesheet">
+    <link href="../assets/Styles/styles_navegacao.css" rel="stylesheet">
+    <link href="./style4.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="d-flex navbar navbar-expand-lg navbar-light bg-white shadow-sm menu_topo">
+            <a class="navbar-brand" href="../Página 4/dashboard.html">
+                <img src="../assets/Images/Logo weStock.png" alt="Logo WeStock">
+            </a>
+            <div class="collapse navbar-collapse">
+                <div class="search-container">
+                    <input type="text" class="form-control search-bar" placeholder="Procurar aqui...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-perfil" href="../Página 5/perfil.html"><img class="icone-nome" src="../assets/Images/Perfil.png" alt="Perfil"> Lebron</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="d-flex sidebar">
+        <div class="sidebar-superior">
+            <a href="../Página 5/perfil.html"><img src="../assets/Images/Perfil_pequeno3.png" alt="icone perfil pequeno" class="sidebar-icon">Perfil</a>
+            <a href="../Página 7/consulta_produtos.html"><img src="../assets/Images/Nuvem-produtos3.png" alt="icone nuvem pequeno" class="sidebar-icon">Produtos</a>
+        </div>
+        <div class="sidebar-inferior">
+            <a class="nav-link nav-link-contato" href="https://wa.me/5511987654321" target="_blank"><img src="../assets/Images/Info3.png" class="sidebar-icon">Ajuda</a>
+            <a href="../Página 1/index.html"><img src="../assets/Images/ExitDoor3.png" alt="ícone porta saída pequeno" class="sidebar-icon"> Sair da conta</a>
+        </div>
+    </nav>
+
+    <main class="d-flex main-content">
+        <div class="d-flex welcome">
+            <p class="welcome-destaque">Olá, Lebron! 👋</p>         
+        </div>
+
+
+        <div class="d-flex btn-add">
+            <a href="../Página 6/cadastro_produto.html"><button class="btn botao-adicionar"> + Adicionar produto</button></a>
+        </div>
+
+        <div class="d-flex justify-content-around cards">
+            <a class="product-card-link" href="../Página 7/consulta_produtos.html"><div class="product-card">
+                <div class="product-card-main">
+                    <img class="product-card-mainImage" src="../assets/Images/Purple-shirt.png" alt="Estoque de produtos">
+                    <p  class="product-card-title">Estoque de <br /> produtos</p>
+                </div>
+                <div>
+                    <img class="product-card-arrow" src="../assets/Images/Right-arrow.png" alt="Seta para a direita">
+                </div>
+            </div></a>
+
+            <div class="d-flex recent-product-card">
+                <h5 class="recent-product-card-title">Últimos itens cadastrados</h5>
+                    <div class="d-flex recent-product-card-item">
+                            <img src="../assets/Images/Yellow-shirts.png" alt="Two Jerseys Lakers">
+                            <p>Jersey Lakers</p>
+                            <p>31/05/2024</p>
+                    </div>
+                    <div class="d-flex recent-product-card-item">
+                            <img src="../assets/Images/Purple-shirt.png" alt="Jersey Lebron">
+                            <p>Jersey Lebron</p>
+                            <p>31/05/2024</p>
+                    </div>
+                    <div class="d-flex recent-product-card-item">
+                            <img src="../assets/Images/BlackShorts.png" alt="Shorts Nike">
+                            <p>Shorts Nike</p>
+                            <p>29/05/2024</p>
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./dashboard.js"></script>
+</body>
+</html>

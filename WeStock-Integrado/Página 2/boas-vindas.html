@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeStock - Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="../assets/Styles/styles.css" rel="stylesheet">
+    <link href="../assets/Styles/styles_cadastro.css" rel="stylesheet">
+    <link href="./style2.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-white shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="../Página 1/index.html">
+                <img src="../assets/Images/Logo weStock.png" alt="Logo WeStock">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-contato" href="https://wa.me/5511987654321" target="_blank">Contato</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-cadastro" href="../Página 3/cadastro.html">Cadastre-se</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="d-flex flex-column align-items-center justify-content-center min-vh-100 text-center py-5 my-5">
+        <h1 class="titulo-cadastro mb-4">Boas Vindas!</h1>
+        <form id="loginForm" class="w-100 my-3" style="max-width: 300px;">
+            <div class="form-group">
+                <label for="email" class="d-flex form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail">
+            </div>
+            <div class="form-group">
+                <label for="password" class="d-flex form-label">Senha</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha">
+            </div>
+            <a href="../Página 8/redefinicao_senha.html" class="d-block mb-4 senha_esquecida">Esqueceu sua senha?<br />Clique aqui</a>
+            <button type="submit" class="btn btn-primary btn-block botao-entrar_salvar">Entrar</button>
+        </form>
+        <div class="my-3">Ou</div>
+        <div class="social-login d-flex justify-content-center my-3">
+            <a href="#" class="mx-3"><img src="../assets/Images/LogoFacebook.png" alt="Login com conta Facebook" class="img-fluid" style="width: 30px;"></a>
+            <a href="#" class="mx-3"><img src="../assets/Images/LogoGoogle.png" alt="Login com conta Google" class="img-fluid" style="width: 30px;"></a>
+            <a href="#" class="mx-3"><img src="../assets/Images/LogoApple.png" alt="Login com conta Apple" class="img-fluid" style="width: 30px;"></a>
+        </div>
+        <div class="register mt-3">
+            <p>Não tem uma conta? <a href="../Página 3/cadastro.html" class="link-cadastrar">Cadastre-se.</a></p>
+        </div>
+    </main>
+    <img src="../assets/Images/Group25.png" alt="Imagem decorativa" class="decorative-image-top-right">
+    <img src="../assets/Images/Group25.png" alt="Imagem decorativa" class="decorative-image-bottom-left">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../assets/Scripts/components/login.js"></script>
+</body>
+</html>

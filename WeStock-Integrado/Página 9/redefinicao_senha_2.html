@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeStock - Redefinir senha</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="../assets/Styles/styles.css" rel="stylesheet">
+    <link href="../assets/Styles/styles_cadastro.css" rel="stylesheet">
+    <link href="./style2.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-white shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="../Página 1/index.html">
+                <img src="../assets/Images/Logo weStock.png" alt="Logo WeStock">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-contato" href="https://wa.me/5511987654321" target="_blank">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="d-flex flex-column align-items-center justify-content-center min-vh-100 text-center py-5 mt-5">
+        <h1 class="titulo-cadastro mb-5">Redefinir senha</h1>
+        <form id="updatePasswordForm" class="w-100" style="max-width: 400px;">
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+            </div>
+            <div class="form-group text-left">
+                <small id="passwordHelp" class="form-text text-muted">
+                    Sua senha deve conter:
+                    <ul>
+                        <li>No mínimo, 6 dígitos;</li>
+                        <li>Pelo menos uma letra maiúscula;</li>
+                        <li>Pelo menos uma letra minúscula;</li>
+                        <li>No mínimo um caractere especial (ex: #%&@*).</li>
+                    </ul>
+                </small>
+                <span id="passwordError" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="repetir-senha">Repita a senha</label>
+                <input type="password" class="form-control" id="repetir-senha" placeholder="Repita a senha">
+                <span id="confirmPasswordError" class="error-message"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block botao-entrar_salvar">Salvar</button>
+        </form>
+    </main>
+    <img src="../assets/Images/Group25.png" alt="Imagem decorativa" class="decorative-image-top-right">
+    <img src="../assets/Images/Group25.png" alt="Imagem decorativa" class="decorative-image-bottom-left">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../Página 9/password-reset.js"></script>
+    <script>
+        document.getElementById('updatePasswordForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var password = document.getElementById('senha').value;
+            var confirmPassword = document.getElementById('repetir-senha').value;
+            var passwordError = document.getElementById('passwordError');
+            var confirmPasswordError = document.getElementById('confirmPasswordError');
+
+            // Regular expression to validate the password
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[%#&@*])[A-Za-z%#&@*]{6,}$/;
+            passwordError.textContent = '';
+            confirmPasswordError.textContent = '';
+
+            // Validate password against the regular expression
+            if (!passwordRegex.test(password)) {
+                passwordError.textContent = 'A senha não atende aos requisitos.';
+                return;
+            }
+            
+            // Ensure passwords match
+            if (password !== confirmPassword) {
+                confirmPasswordError.textContent = 'As senhas não coincidem.';
+                return;
+            }
+
+            alert('Senha atualizada com sucesso!');
+            // Here you can submit the form if validation is successful
+            // this.submit();
+
+            // Redirect to the index page
+            window.location.href = "../Página 1/index.html";
+        });
+    </script>   
+</body>
+</html>

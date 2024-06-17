@@ -1,0 +1,15 @@
+.profile-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--cor-02);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--cor-08);
+}
+
+.profile-container .form-group {
+    margin-bottom: 15px;
+}
+
+.profile-container .btn {
+    width: 100%;
+}

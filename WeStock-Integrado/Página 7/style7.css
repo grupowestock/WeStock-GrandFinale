@@ -1,0 +1,55 @@
+.main-content {
+    font-family: var(--font-09);
+}
+
+.filter-header {
+    flex-direction: column;
+}
+
+.filter-options {
+    padding: 30px 0;
+}
+
+.checkbox-text {
+    font-size: 18px;
+    padding-left: 15px;
+    margin: 10px;
+}
+
+.consulta-info {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-produtos {
+    color: var(--cor-09);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.table.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+.table.table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tbody tr:hover td {
+    cursor: pointer;
+    background-color: var(--cor-11);
+}
+
+.fa-edit {
+    color: var(--cor-05);
+}
+
+.fa-edit:hover {
+    color: var(--cor-04);
+}
+
+.fa-trash:hover {
+    color: var(--cor-07);
+}

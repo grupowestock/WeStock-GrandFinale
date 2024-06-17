@@ -1,0 +1,160 @@
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-link img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px var(--cor-17);
+}
+
+.whatsapp-link img:hover {
+    opacity: 0.7;
+}
+
+.btn-primary {
+    background-color: var(--cor-01);
+    color: var(--cor-02);
+    font: var(--font-01);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-04);
+    border-color: var(--cor-04);
+}
+
+.hero-section {
+    position: relative;
+    color: var(--cor-02);
+    background-color: var(--cor-02);
+    background-image: url('../assets/Images/Hero section background.png');
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 16px;
+}
+
+.hero-section-img {
+    padding: 20px;
+}
+
+.text-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section-title {
+    font: var(--font-04);
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.hero-section-text {
+    font: var(--font-04);
+    font-size: 16px;
+}
+
+.features-section {
+    padding: 30px 0;
+}
+
+.features-box {
+    border: 1px solid var(--cor-01);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px 0;
+    background-color: var(--cor-02);
+    height: 100%;
+}
+
+.features-img {
+    width: 38px;
+    height: 35px;
+    margin: 13px;
+}
+
+.features-text {
+    font: var(--font-04);
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--cor-01);
+}
+
+.stats-section {
+    background-color: var(--cor-01);
+    color: var(--cor-02);
+    padding: 40px 0;
+}
+
+.stats-box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.stats-box h2 {
+    margin-bottom: 10px;
+}
+
+.stats-box p {
+    font-size: 16px;
+}
+
+.stats-img {
+    width: 68px;
+    height: 55px;
+}
+
+.stats-number {
+    font-weight: 700;
+    font-size: 56px;
+    color: var(--cor-02);    
+}
+
+.stats-text {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--cor-02);    
+}
+
+@media (max-width: 768px) {
+    .hero-section-title {
+        font-size: 32px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    .hero-section-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .stats-number {
+        font-size: 48px;
+    }
+
+    .stats-text {
+        font-size: 14px;
+    }
+
+    .hero-section {
+        background-size: auto 60%;
+    }
+}
