@@ -44,4 +44,7 @@ Para executar este projeto localmente, siga estes passos:
 
 ## Conclusão
 
-Esperamos que você tenha uma ótima experiência com a nossa aplicação!
+Esperamos que você tenha uma ótima experiência com o nosso projeto!
+
+
+Para acessar a aplicação mobile da WeStock, acesse o repositório: https://github.com/grupowestock/WeStockApp.git
